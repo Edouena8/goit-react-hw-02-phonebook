@@ -69,13 +69,19 @@ class App extends Component {
         // justifyContent: 'center',
         alignItems: 'flex-start',
         fontSize: 40,
-        color: '#010101'
+        color: '#ffffff'
       }}
     >
-      <h1>Phonebook</h1>
+      <h1 style={{
+        fontSize: '40px',
+        textShadow: '4px 4px 2px rgba(0,0,0,0.6)'}}
+      >Phonebook</h1>
       <ContactForm onSubmit={this.formSubmitHandler}/>
 
-      <h2>Contacts</h2>
+      <h2 style={{
+        fontSize: '40px',
+        textShadow: '4px 4px 2px rgba(0,0,0,0.6)'}}
+      >Contacts</h2>
       <Filter value={filter} onChange={this.changeFilter}/>
       <ContactList options={visibleContacts} onDeleteContact={this.deleteContact}/>
       

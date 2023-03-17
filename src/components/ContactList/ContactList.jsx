@@ -1,21 +1,14 @@
+import { ContactWrap, ContactItem, ContactText, DeleteBtn } from "./ContactList.styled";
+
 const ContactList = ({options, onDeleteContact}) => (
-    <ul style={{width: '600px'}}>
+    <ContactWrap>
         {options.map(({id, name, number}) => (
-            <li 
-                key={id} 
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    padding: '20px',
-                    marginBottom: '10px',
-                    border: '1px solid black'
-                }}>
-                <p>{name}: {number}</p>
-                <button type="button" onClick={() => onDeleteContact(id)}>Delete</button>
-            </li>
+            <ContactItem key={id}>
+                <ContactText>{name}: {number}</ContactText>
+                <DeleteBtn type="button" onClick={() => onDeleteContact(id)}>Delete</DeleteBtn>
+            </ContactItem>
         ))}
-    </ul>
+    </ContactWrap>
 );
 
 
