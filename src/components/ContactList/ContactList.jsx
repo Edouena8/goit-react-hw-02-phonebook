@@ -1,4 +1,10 @@
-import { ContactWrap, ContactItem, ContactText, DeleteBtn } from "./ContactList.styled";
+import PropTypes from 'prop-types';
+import { 
+    ContactWrap, 
+    ContactItem, 
+    ContactText, 
+    DeleteBtn 
+} from "./ContactList.styled";
 
 const ContactList = ({options, onDeleteContact}) => (
     <ContactWrap>
@@ -11,5 +17,9 @@ const ContactList = ({options, onDeleteContact}) => (
     </ContactWrap>
 );
 
+ContactList.propTypes = {
+    options: PropTypes.array.isRequired,
+    onDeleteContact: PropTypes.func.isRequired,
+}
 
 export default ContactList;

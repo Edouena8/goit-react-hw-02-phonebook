@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { FormWrap, LabelWrap, LabelText, FormInput, AddBtn } from "./ContactForm.styled";
+import PropTypes from "prop-types";
+import { 
+    FormWrap, 
+    LabelWrap, 
+    LabelText, 
+    FormInput, 
+    AddBtn 
+} from "./ContactForm.styled";
 
 class ContactForm extends Component {
     state = {
@@ -61,6 +68,10 @@ class ContactForm extends Component {
         </FormWrap>
         )
     }
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default ContactForm;
