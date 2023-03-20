@@ -35,6 +35,7 @@ text-decoration: none;
   color: #63009C;
   font-family: 'Montserrat', sans-serif;
   transition: .4s;
+  cursor: pointer;
 
   &:after {
     content: "";
